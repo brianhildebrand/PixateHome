@@ -1,0 +1,229 @@
+ @media (max-width: 1179px) {
+
+}
+
+
+@media (max-width: 979px) {
+
+	p {
+		font-size: 16px;
+		line-height: 28px;
+	}
+
+	.nav-menu {
+		li{
+			margin-left: 30px;
+		}
+	}
+
+	.quote{
+		font-size: 18px;
+	}
+
+	#zephyr-logo{
+		height: 74px;
+		width: 74px;
+		background-size: 74px 74px;
+	}
+
+	#TAN-logo{
+		height: 71px;
+		width: 100px;
+		background-size: 100px 71px;
+		margin-right: 20px;
+	}
+	
+}
+
+
+@media (max-width: 767px) {
+
+	html, body{
+		overflow-x:hidden;
+		overflow-y:visible;
+	}
+
+	body{
+		border:none;
+		padding:0;
+	}
+
+	#page{
+		&.opened{
+			-webkit-transform: translate3d(180px, 0, 0);
+			-moz-transform: translate3d(180px, 0, 0);
+			-ms-transform: translate3d(180px, 0, 0);
+			-o-transform: translate3d(180px, 0, 0);
+			transform: translate3d(180px, 0, 0);
+		}
+	}
+	
+	.container {
+		padding: 0 40px;
+	}
+	
+	
+	#outer-ajax {
+		margin-left: 0;
+		padding-top: 60px;
+	}
+
+	.half {
+		width: 100%;
+	}
+	
+	.full-width {
+		height: 400px;
+		background-position: center;
+	}
+
+	#navigation-container{
+		width:100%;
+		padding:0;
+	}
+
+	.site-header{
+		height:64px;
+	}
+
+	.site-header .container{
+		width:100%;
+		padding:0;
+	}
+
+	#site-navigation{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		margin-top: 64px;
+		background-color: @pink;
+		left: -100%;
+		display: table;
+		.transition (all, .2s);
+		&.open{
+			-webkit-transform: translate3d(100%, 0, 0);
+			-moz-transform: translate3d(100%, 0, 0);
+			-ms-transform: translate3d(100%, 0, 0);
+			-o-transform: translate3d(100%, 0, 0);
+			transform: translate3d(100%, 0, 0);
+		}
+	}
+
+	#main-content{
+		margin-left:0;
+		padding-top: 80px;
+	}
+
+	.nav-menu {
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+		ul{
+			margin-left:0;
+		}
+		li{
+			float: none;
+			width:100%;
+			text-align: center;
+			line-height: 4.4em;
+			margin-left:0;
+		}
+	}
+
+	.sub-menu{
+		display:block;
+		li a{
+			//color: @mediumGrey;
+		}
+	}
+
+	#logo{
+		margin-left:20px;
+	}
+
+	#menu-toggle{
+		display: block;
+	}
+
+	#featured-properties .property-link {
+		margin-bottom: 24px;
+	}
+
+	.property-data{
+		margin-top: 40px;
+	}
+
+	#my-services{
+		.span4{
+			margin-bottom: 24px;
+		}
+	}
+
+	.quote{
+		font-size: 16px;
+		line-height: 1.4em;
+	}
+
+}
+
+
+@media (max-width : 480px) {
+
+	.half-width{
+		width:100%;
+	}
+
+	.hero-image{
+		background-attachment: scroll;
+		min-height: 440px;
+	}
+
+	footer {
+		text-align: center;
+		.span4{
+			margin:12px 0;
+		}
+	}
+
+	.slideshow{
+		.fancy{
+			height:400px;
+			img{
+				max-height:400px;
+			}
+		}
+	}
+
+	.quote{
+		font-size: 18px;
+	}
+
+	#about-text{
+		text-align: center;
+		h2{
+			margin-bottom: 42px;
+		}
+	}
+
+	.affiliate-container{
+		width: 195px;
+  		margin: auto;
+	}
+
+	#contact-message {
+		height: 560px;
+	}
+
+	#contact-actions {
+		background-color: @pink;
+		color: @darkGrey!important;
+	}
+
+	#logo{
+		background-size: 220px 44px;
+		height: 44px;
+		width: 220px;
+		margin-top:12px;
+	}
+	
+}
