@@ -5388,7 +5388,13 @@ a:hover {
 .background-light-blue {
   background-color: #8bdbee;
 }
+.background-light-blue h2 {
+  color: #ffffff;
+}
 .background-light-blue p {
+  color: #222222;
+}
+.background-light-blue .sub-heading {
   color: #222222;
 }
 .uppercase {
@@ -5552,7 +5558,7 @@ footer .pixate-logo {
   color: white!important;
 }
 #feature-container {
-  height: 740px;
+  height: 760px;
   margin-top: 70px;
   overflow: hidden;
 }
@@ -5560,10 +5566,12 @@ footer .pixate-logo {
   position: relative;
 }
 #app-pixate {
-  width: 800px;
+  width: 740px;
+  height: 527px;
+  overflow: hidden;
   left: 50%;
   margin-left: -450px;
-  top: 150px;
+  top: 60px;
   position: absolute;
   background: url(../img/browser-window.svg) no-repeat;
   padding-top: 28px;
@@ -5572,12 +5580,12 @@ footer .pixate-logo {
   box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
 }
 #app-phone {
-  width: 300px;
-  height: 643px;
+  width: 220px;
+  height: 473px;
   right: 7%;
-  top: 125px;
+  top: 130px;
   position: absolute;
-  padding: 66px 8px 0 8px;
+  padding: 49px 5px 0 5px;
   background: url(../img/iphone-black.svg) no-repeat;
 }
 .CTA-section .primary-CTA {
@@ -5610,6 +5618,9 @@ footer .pixate-logo {
 }
 .builder-feature {
   padding-top: 190px;
+}
+.builder-feature h2 {
+  margin-bottom: 24px;
 }
 .screen-capture {
   position: relative;

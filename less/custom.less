@@ -198,7 +198,13 @@ a{
 
 .background-light-blue{
 	background-color: @lightBlue;
+	h2{
+		color: @white;
+	}
 	p{
+		color:@black;
+	}
+	.sub-heading{
 		color:@black;
 	}
 }
@@ -376,10 +382,10 @@ footer{
 	margin-left: -250px;
 	top: 310px;
 	color: white!important;
-}
+}	
 
 #feature-container{
-	height: 740px;
+	height: 760px;
 	margin-top: @headerHeight;
 	overflow: hidden;
 }
@@ -389,10 +395,12 @@ footer{
 }
 
 #app-pixate{
-	width: 800px;
+	width: 740px;
+	height: 527px;
+	overflow: hidden;
 	left: 50%;
 	margin-left: -450px;
-	top: 150px;
+	top: 60px;
 	position:absolute;
 	background: url(../img/browser-window.svg)no-repeat;
 	padding-top: 28px;
@@ -400,12 +408,12 @@ footer{
 }
 
 #app-phone{
-	width: 300px;
-	height: 643px;
+	width: 220px;
+	height: 473px;
 	right: 7%;
-	top: 125px;
+	top: 130px;
 	position:absolute;
-	padding: 66px 8px 0 8px;
+	padding: 49px 5px 0 5px;
 	background: url(../img/iphone-black.svg)no-repeat;
 }
 
@@ -455,6 +463,9 @@ footer{
 
 .builder-feature{
 	padding-top: 190px;
+	h2{
+		margin-bottom: 24px;
+	}
 }
 
 .screen-capture{
