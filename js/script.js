@@ -3,83 +3,33 @@ $(document).ready(function(){
 	var		winWidth				= $(window).width(),
 			winHeight 				= $(window).height(),
 			playedInterface			= false,
-			playedExamples			= false;
+			playedExamples			= false,
+			animating				= false;
 
 	
-	$( ".interface-button" ).click(function() {
-		
-		var selectedScreen 		= $(this).attr("data-screen") + "-screen",
-			selectedPhoneVideo	= $(this).attr("data-screen") + "-video",
-			selectedEditorVideo	= $(this).attr("data-screen") + "-video-editor",
-			selectedEditor		= $(this).attr("data-screen") + "-screen-macbook";
 
-		
-		if( $(this).hasClass('active') ){
-			console.log("already the active screen");
-		} else {
-			console.log("swap the screens");
+	$( ".play-button" ).click(function() {
 
-			$( ".iphone-screen.active" ).fadeOut("slow", function(){
-				$( ".iphone-screen" ).removeClass('active');
-				//$( "#" + selectedScreen ).addClass('active');
-				$( "#" + selectedScreen ).fadeIn( "slow", function(){
-					$( "#" + selectedScreen ).addClass('active');
-				});
+		var selectedDemo = $(this).attr("data-video");
+
+		$( ".play-button" ).removeClass('active');	
+
+		$( ".example-video.active" ).fadeOut("slow", function(){
+			
+			$( ".example-video" ).removeClass('active');
+
+			$( "#" + selectedDemo ).fadeIn( "slow", function(){
+				$( "#" + selectedDemo ).addClass('active');
+				$( "#" + selectedDemo ).get(0).play();
+
 			});
 
-			$( ".macbook-screen.active" ).fadeOut("slow", function(){
-				$( ".macbook-screen" ).removeClass('active');
-				//$( "#" + selectedScreen ).addClass('active');
-				$( "#" + selectedEditor ).fadeIn( "slow", function(){
-					$( "#" + selectedEditor ).addClass('active');
-					$( "#" + selectedEditorVideo ).get(0).play();
-				});
-			});
-		}
+		});
 
-
-		$( ".interface-button" ).removeClass('active');
-		$(this).addClass('active');
-	
+		$( this ).addClass('active');
+		
 	});
 
-	/*
-	$('#interaction-video-editor').get(0).addEventListener('ended', function(e) {
-		console.log("builder video ended");
-		$("#interaction-video").get(0).play();
-	});
-	*/
-
-	/*
-	$(window).scroll(function(){
-
-		var examplesVisible 	= $('#examples-section').visible(),
-			interfaceVisible	= $('#interaction-section').visible(),
-			controlVisible		= $('#control-section').visible();
-		
-		if( examplesVisible && playedExamples == false ){
-			//$('.example-video').get(0).play();
-
-			$('.example-video').each(function () {
-				this.play();
-			});
-
-			playedExamples = true;
-		}	
-		
-		
-		if( interfaceVisible ){
-			$('#interaction-editor-video').get(0).play();
-			playedInterface = true;
-		}
-		
-
-		if( controlVisible ){
-			$('#controls-editor-video').get(0).play();
-			playedInterface = true;
-		}
-	});
-	*/
 
 	var wow = new WOW(
 	  {
@@ -87,9 +37,28 @@ $(document).ready(function(){
 	    animateClass: 'animated', // animation css class (default is animated)
 	    offset:       1,          // distance to the element when triggering the animation (default is 0)
 	    mobile:       true,       // trigger animations on mobile devices (default is true)
-	    live:         false        // act on asynchronously loaded content (default is true)
+	    live:         false,        // act on asynchronously loaded content (default is true)
+	    callback:     function(box) {
+	    	
+	    	var animatedId = box.id;
+	    	
+			if( animatedId == "app-container" ){
+				//$('#app-pixate').get(0).play();
+				console.log("play vid");
+
+				setTimeout(function() {
+					document.getElementById('pixate-app-video').play();
+				}, 1000);
+
+				setTimeout(function() {
+					document.getElementById('pixate-phone-video').play();
+				}, 1500);
+			}
+	    }
+
 	  }
 	);
+	
 	wow.init();
 
 	$( '#examples-section .iphone' ).hover(
@@ -102,11 +71,4 @@ $(document).ready(function(){
 		}
 	);
 
-	
 });
-
-
-
-
-
-

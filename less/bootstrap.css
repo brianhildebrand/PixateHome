@@ -5289,6 +5289,10 @@ h2 {
   font-size: 30px;
   font-weight: 300;
 }
+h2.thick {
+  font-weight: 400;
+  color: #0DD7EC;
+}
 h3 {
   font-size: 14px;
   text-transform: uppercase;
@@ -5312,7 +5316,7 @@ a:hover {
   color: #222222;
 }
 .sub-heading {
-  font-size: 18px;
+  font-size: 16px;
   color: #999999;
   font-weight: 300;
 }
@@ -5383,6 +5387,9 @@ a:hover {
 }
 .background-light-blue {
   background-color: #8bdbee;
+}
+.background-light-blue p {
+  color: #222222;
 }
 .uppercase {
   text-transform: uppercase;
@@ -5545,25 +5552,33 @@ footer .pixate-logo {
   color: white!important;
 }
 #feature-container {
-  position: relative;
   height: 740px;
   margin-top: 70px;
   overflow: hidden;
+}
+#app-container {
+  position: relative;
 }
 #app-pixate {
   width: 800px;
   left: 50%;
   margin-left: -450px;
-  top: 220px;
+  top: 150px;
   position: absolute;
   background: url(../img/browser-window.svg) no-repeat;
   padding-top: 28px;
+  -webkit-box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
 }
 #app-phone {
-  width: 280px;
+  width: 300px;
+  height: 643px;
   right: 7%;
-  top: 195px;
+  top: 125px;
   position: absolute;
+  padding: 66px 8px 0 8px;
+  background: url(../img/iphone-black.svg) no-repeat;
 }
 .CTA-section .primary-CTA {
   margin-top: 48px;
@@ -5617,6 +5632,11 @@ footer .pixate-logo {
   -webkit-box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
   box-shadow: -5px 5px 40px -5px rgba(0, 0, 0, 0.4);
+  /*
+    -webkit-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
+    -moz-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
+    box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
+    */
 }
 .screen-left {
   left: -50%;
@@ -5667,12 +5687,12 @@ footer .pixate-logo {
 }
 .interface-button {
   /*width: 33.3%;
-	height: 224px;
-	position: relative;
-	border-top: 2px solid @cyan;
-	border-bottom: 2px solid @cyan;
-	padding: 40px 40px 0 40px;
-	background-color: white;*/
+  height: 224px;
+  position: relative;
+  border-top: 2px solid @cyan;
+  border-bottom: 2px solid @cyan;
+  padding: 40px 40px 0 40px;
+  background-color: white;*/
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -5681,28 +5701,28 @@ footer .pixate-logo {
   transition: all 0.2s ease-in-out;
   color: #999999;
   /*
-	&:nth-child(2){
-		border-left: 2px solid @cyan;
-		border-right: 2px solid @cyan;
-	}
+  &:nth-child(2){
+    border-left: 2px solid @cyan;
+    border-right: 2px solid @cyan;
+  }
 
-	&:before{
-		background-color: @blue;
-		content: '';
-		height: 28px;
-		width: 28px;
-		display: none;
-		-ms-transform: rotate(45deg);
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-		position: absolute;
-		top: -16px;
-		left: 50%;
-		margin-left: -15px;
-		border-top: 2px solid @cyan;
-		border-left: 2px solid @cyan;
-	}
-	*/
+  &:before{
+    background-color: @blue;
+    content: '';
+    height: 28px;
+    width: 28px;
+    display: none;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    margin-left: -15px;
+    border-top: 2px solid @cyan;
+    border-left: 2px solid @cyan;
+  }
+  */
 }
 .interface-button:hover h3 {
   color: #a4f9ff;
@@ -5728,6 +5748,10 @@ footer .pixate-logo {
   transform: rotate(45deg);
 }
 */
+#examples-section {
+  position: relative;
+  height: 650px;
+}
 #examples-section .iphone {
   position: relative;
   width: 80%;
@@ -5746,6 +5770,10 @@ footer .pixate-logo {
   -moz-transform: translate(0, -10px);
   -ms-transform: translate(0, -10px);
   -o-transform: translate(0, -10px);
+}
+#examples-section .sub-heading {
+  margin: 24px 0;
+  line-height: 1.5em;
 }
 #examples-container {
   padding-top: 64px;
@@ -5811,6 +5839,45 @@ footer .pixate-logo {
 #apple {
   background: url(../img/apple.svg) no-repeat;
   margin-left: 12px;
+}
+.example-video {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.example-video.active {
+  display: block;
+}
+#example-buttons {
+  border-top: 1px solid #ffffff;
+  padding-top: 12px;
+}
+.play-button {
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-right: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.play-button:hover,
+.play-button.active {
+  color: #0DD7EC;
+}
+#prototype-text {
+  position: absolute;
+  width: 400px;
+  z-index: 1000;
+  bottom: 140px;
+  right: 200px;
+}
+#prototype-text .sub-heading {
+  color: #ffffff;
 }
 #our-clients {
   color: #999999;

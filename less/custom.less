@@ -72,6 +72,12 @@
 	opacity: @opacity;
 }
 
+.drop-shadow (@x, @y, @blur, @spread, @alpha) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
 // General Styles
 
 *{
@@ -89,7 +95,10 @@ html, body{
 h2{
 	font-size: @largeFont;
 	font-weight: 300;
-
+	&.thick{
+		font-weight: 400;
+		color: #0DD7EC;
+	}
 }
 
 h3{
@@ -118,7 +127,7 @@ a{
 }
 
 .sub-heading{
-	font-size: 18px;
+	font-size: @mediumFont;
 	color:@mediumGrey;
 	font-weight: 300;
 }
@@ -189,6 +198,9 @@ a{
 
 .background-light-blue{
 	background-color: @lightBlue;
+	p{
+		color:@black;
+	}
 }
 
 .uppercase{
@@ -367,27 +379,34 @@ footer{
 }
 
 #feature-container{
-	position: relative;
 	height: 740px;
 	margin-top: @headerHeight;
 	overflow: hidden;
+}
+
+#app-container{
+	position: relative;
 }
 
 #app-pixate{
 	width: 800px;
 	left: 50%;
 	margin-left: -450px;
-	top: 220px;
+	top: 150px;
 	position:absolute;
 	background: url(../img/browser-window.svg)no-repeat;
 	padding-top: 28px;
+	.drop-shadow( -5px, 5px, 40px, -5px, .4 );
 }
 
 #app-phone{
-	width: 280px;
+	width: 300px;
+	height: 643px;
 	right: 7%;
-	top: 195px;
+	top: 125px;
 	position:absolute;
+	padding: 66px 8px 0 8px;
+	background: url(../img/iphone-black.svg)no-repeat;
 }
 
 // CTA Section
@@ -449,15 +468,16 @@ footer{
 	video{
 		max-width: 100%;
 		height:auto;
-		-webkit-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
-		-moz-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
-		box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
+		.drop-shadow( -5px, 5px, 40px, -5px, .4 );
 	}
 	img{
 		max-height: 100%;
+		.drop-shadow( -5px, 5px, 40px, -5px, .4 );
+		/*
 		-webkit-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
 		-moz-box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
 		box-shadow: -5px 5px 40px -5px rgba(0,0,0,0.4);
+		*/
 	}
 }
 
@@ -591,6 +611,8 @@ footer{
 // Examples Section
 
 #examples-section{
+	position: relative;
+	height: 650px;
 	.iphone{
 		position: relative;
 		width: 80%;
@@ -603,7 +625,10 @@ footer{
 		}
 	}
 	video{
-
+	}
+	.sub-heading{
+		margin: 24px 0;
+		line-height: 1.5em;
 	}
 }
 
@@ -680,6 +705,44 @@ footer{
 #apple{
 	background: url(../img/apple.svg)no-repeat;
 	margin-left: 12px;
+}
+
+.example-video{
+	position: absolute;
+	top:0;
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+
+#example-buttons{
+	border-top: 1px solid @white;
+	padding-top: 12px;
+}
+
+.play-button{
+	color: white;
+	font-size: @xsmallFont;
+	font-weight: 300;
+	letter-spacing: 2px;
+	cursor: pointer;
+	margin-right: 20px;
+	.transition (all, .2s);
+	&:hover, &.active{
+		color: #0DD7EC;
+	}
+}
+
+#prototype-text{
+	position: absolute;
+	width:400px;
+	z-index: 1000;
+	bottom: 140px;
+	right: 200px;
+	.sub-heading{
+		color:@white;
+	}
 }
 
 // Testimonial Section

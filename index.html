@@ -38,57 +38,59 @@
 			</div>
 		</div>
 		
-		
 		<section id="feature-container" class="xtra-padding background-light-blue">
 			<div class="container">
 				<h2 class="text-center">Take Your Ideas to Reality</h2>
 				<div class="sub-heading text-center">Change the way you design with rapid, full-fidelity prototypes.</div>
-				<div id="app-pixate">
-					<video width="100%" height="auto" autoplay>
-						<source src="img/builder-pixate.mp4" type="video/mp4">
-					</video>
+				
+				<div id="app-container" class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+					<div id="app-pixate">
+						<video id="pixate-app-video" width="100%" height="auto">
+							<source src="img/builder-pixate.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div id="app-phone">
+						<video id="pixate-phone-video" width="100%" height="auto">
+							<source src="img/app-phone.mp4" type="video/mp4">
+						</video>
+					</div>
 				</div>
-
-				<div id="app-phone">
-					<video width="100%" height="auto" autoplay>
-						<source src="img/builder-phone-v2.mp4" type="video/mp4">
-					</video>
-				</div>
+				
 			</div>
 		</section>			
 		
-		
-		<section id="examples-section" class="background-light-grey xtra-padding clearfix">
-			<h2 class="text-center">Experience real native prototyping</h2>
-			<div class="sub-heading text-center">Pixate generates 100% native prototypes, so you can experience your ideas on device as if they’re completely real.</div>
-		
+		<section id="examples-section" class="background-light-grey clearfix">
 
-			<video class="pull-left" width="50%" height="auto"  muted>
-				<source src="img/square-vid.mp4" type="video/mp4">
-			</video>
-
-			<video class="pull-left" width="50%" height="auto"  muted>
-				<source src="img/square-vid.mp4" type="video/mp4">
-			</video>
-			<video class="pull-left" width="50%" height="auto"  muted>
-				<source src="img/square-vid.mp4" type="video/mp4">
-			</video>
-
-			<video class="pull-left" width="50%" height="auto"  muted>
-				<source src="img/square-vid.mp4" type="video/mp4">
-			</video>
+				<div id="prototype-text">
+					<h2 class="thick">Experience Real,<br/> Native Prototyping</h2>
+					<div class="sub-heading">Pixate generates 100% native prototypes, so you can experience your ideas on device as if they’re completely real.</div>
+					<div id="example-buttons" class="clearfix">
+						<div class="play-button pull-left active" data-video="yahoo-vid">Yahoo News</div>
+						<div class="play-button pull-left" data-video="keezy-vid">Keezy</div>
+						<div class="play-button pull-left" data-video="face-vid">Face Builder</div>
+					</div>
+				</div>
+				
+				<video id="yahoo-vid" class="example-video active" width="100%" height="auto" autoplay loop muted>
+					<source src="img/examples/yahoo-news.mp4" type="video/mp4">
+				</video>
+				<video id="keezy-vid" class="example-video" width="100%" height="auto" muted loop>
+					<source src="img/examples/keezy.mp4" type="video/mp4">
+				</video>
+				<video id="face-vid" class="example-video" width="100%" height="auto" muted loop>
+					<source src="img/examples/face-maker.mp4" type="video/mp4">
+				</video>
 			
 		</section>
-
 
 		<section id="interaction-section" class="builder-section clearfix background-light-blue">
 			<div class="container">
 				<div class="row">
-					<div class="builder-feature span4 wow fadeInUp">
+					<div class="builder-feature span4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
 						<h2>Rapid iteration with powerful results</h2>
 						<p>Upload layers from your designs, add interaction and animation with a few clicks, and see your design come to life with beautiful, full-fidelity iOS and Android prototypes. All without writing any code</p>
 					</div>
-					<div class="span7 offset1 wow fadeInRight">
+					<div class="span7 offset1 wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
 						<div id="interaction-video" class="screen-capture screen-right">
 							<img src="img/builder-screen.jpg">
 						</div>
@@ -100,12 +102,12 @@
 		<section id="control-section" class="builder-section clearfix background-light-grey">
 			<div class="container">
 				<div class="row">
-					<div class="span8 wow fadeInLeft">
+					<div class="span8 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
 						<div id="control-video" class="screen-capture screen-left">
 							<img src="img/comments-screen.jpg">
 						</div>
 					</div>
-					<div class="builder-feature span4 wow fadeInUp">
+					<div class="builder-feature span4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
 						<h2>Communicate your designs. Sell your vision</h2>
 						<p>Share your prototype with one click and let your entire team or your clients experience it right on their device. Collaborate right within pixate and get the feedback you need to design better products.</p>
 					</div>
@@ -116,11 +118,11 @@
 		<section id="control-section" class="builder-section clearfix">
 			<div class="container">
 				<div class="row">
-					<div class="builder-feature span4 wow fadeInUp">
+					<div class="builder-feature span4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
 						<h2>Collaborate with your entire team</h2>
 						<p>Share complete prototypes, reuse templates, and work collaboratively with your team. Harness the Pixate community to explore examples and discover new ideas.</p>
 					</div>
-					<div class="span8 wow fadeInRight">
+					<div class="span8 wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
 						<div id="control-video" class="screen-capture screen-right">
 							<img src="img/comments-screen.jpg">
 						</div>
@@ -132,12 +134,12 @@
 		<section id="sharing-section" class="builder-section clearfix background-light-blue">
 			<div class="container">
 				<div class="row">
-					<div class="span8 wow fadeInLeft">
+					<div class="span8 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
 						<div id="interaction-video" class="screen-capture screen-left">
 							<img src="img/projects-screen.jpg">
 						</div>
 					</div>
-					<div class="builder-feature span4 wow fadeInUp">
+					<div class="builder-feature span4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
 						<h2>One workspace for your entire company</h2>
 						<p>Pixate is ready for business. Manage projects with complete control, manage a team of 10 or 10,000, and communicate designs seamlessly across teams or your entire  company.</p>
 					</div>
